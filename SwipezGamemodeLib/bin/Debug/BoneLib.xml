@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BoneLib</name>
+    </assembly>
+    <members>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateCategory(System.String,UnityEngine.Color)">
+            <summary>
+            Creates a category with a name and a color. 
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="color">The name's color.</param>
+            <returns>A new category.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateCategory(System.String,System.String)">
+            <summary>
+            Creates a category with a name and a hex color input.
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="hexColor">The color in hexadecimal.
+            <code>"Example: "#00CA11" for green."</code></param>
+            <returns>A new category with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateSubPanel(System.String,UnityEngine.Color)">
+            <summary>
+            Creates a sub-panel with a name and a color. 
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="color">The name's color.</param>
+            <returns>A new sub-panel in your page.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateSubPanel(System.String,System.String)">
+            <summary>
+            Creates a sub-panel with a name and a hex color input.
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="hexColor">The color in hexadecimal.</param>
+            <code>"Example: #00CA11 for green."</code>
+            <returns>A new sub-panel in your page.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateFunctionElement(System.String,UnityEngine.Color,System.Action)">
+            <summary>
+            Creates a function element that can be used to execute actions when pressed.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The action that will be executed when pressed.
+            <code>Example: () => ExampleMethod()</code></param>
+            <returns>A function element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateFunctionElement(System.String,UnityEngine.Color,System.Action,System.String)">
+            <summary>
+            Creates a function element with a confirm option. When confirmed, the action will run.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The action that will be executed when pressed.
+            <param name="confirmText">The text that will be displayed before you confirm.</param>
+            <code>Example: () => ExampleMethod()</code></param>
+            <returns>A function element with a confirm option.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateFunctionElement(System.String,System.String,System.Action)">
+            <summary>
+            Creates a function element that can be used to execute actions when pressed.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The name hex color of the element.
+            <code>"Example: "#00CA11" for green."</code> </param>
+            <param name="action">The action that will be executed when pressed.
+            <code>Example: () => ExampleMethod()</code> </param>
+            <returns>A function element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateBoolElement(System.String,UnityEngine.Color,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            Creates a bool element that enables or disables a boolean.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="value">The starting boolean value.</param>
+            <param name="action">The method to execute with a boolean parameter.
+            <code>Example: (bool) => ExampleMethod(bool);</code></param>
+            <returns>A bool element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateBoolElement(System.String,System.String,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            Creates a bool element that enables or disables a boolean.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The name hex color of the element. <code>"Example: "#00CA11" for green."</code> </param>
+            <param name="value">The starting boolean value. <code>Example: (bool) => ExampleMethod(bool);</code> </param>
+            <param name="action">The method to execute with a boolean parameter. <code>Example: (bool) => ExampleMethod(bool);</code></param>
+            <returns>A bool element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateIntElement(System.String,UnityEngine.Color,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.Int32})">
+            <summary>
+            Creates an int element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a integer parameter. <code>Example: (int) => ExampleMethod(int);</code></param>
+            <returns>An integer element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateIntElement(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.Int32})">
+            <summary>
+            Creates an int element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a integer parameter. <code>Example: (int) => ExampleMethod(int);</code></param>
+            <returns>An integer element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateEnumElement``1(System.String,UnityEngine.Color,``0,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value of the element.</param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateEnumElement``1(System.String,System.String,``0,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value of the element.</param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element with a hex name color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateEnumElement``1(System.String,UnityEngine.Color,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateEnumElement``1(System.String,System.String,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element with a hex name color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateFloatElement(System.String,UnityEngine.Color,System.Single,System.Single,System.Single,System.Single,System.Action{System.Single})">
+            <summary>
+            Creates an float element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a float parameter. <code>Example: (float) => ExampleMethod(float);</code></param>
+            <returns>A float element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.MenuCategory.CreateFloatElement(System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.Action{System.Single})">
+            <summary>
+            Creates an float element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a float parameter. <code>Example: (float) => ExampleMethod(float);</code></param>
+            <returns>A float element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFunctionElement(System.String,UnityEngine.Color,System.Action)">
+            <summary>
+            Creates a function element that can be used to execute actions when pressed.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The action that will be executed when pressed.
+            <code>Example: () => ExampleMethod()</code></param>
+            <returns>A function element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFunctionElement(System.String,System.String,System.Action)">
+            <summary>
+            Creates a function element that can be used to execute actions when pressed.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The name hex color of the element.
+            <code>"Example: "#00CA11" for green."</code> </param>
+            <param name="action">The action that will be executed when pressed.
+            <code>Example: () => ExampleMethod()</code> </param>
+            <returns>A function element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFunctionElement(System.String,UnityEngine.Color,System.Action,System.String)">
+            <summary>
+            Creates a function element with a confirm option. When confirmed, the action will run.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The action that will be executed when pressed.
+            <param name="confirmText">The text that will be displayed before you confirm.</param>
+            <code>Example: () => ExampleMethod()</code>
+            </param>
+            <returns>A function element with a confirm option.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFunctionElement(System.String,System.String,System.Action,System.String)">
+            <summary>
+            Creates a function element with a confirm option. When confirmed, the action will run.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The name hex color of the element.
+            <code>"Example: "#00CA11" for green."</code> </param>
+            <param name="action">The action that will be executed when pressed.
+            <code>Example: () => ExampleMethod()</code> </param>
+            <param name="confirmText">The text that will be displayed before you confirm.</param>
+            <returns>A function element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateIntElement(System.String,UnityEngine.Color,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.Int32})">
+            <summary>
+            Creates an int element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a integer parameter. <code>Example: (int) => ExampleMethod(int);</code></param>
+            <returns>An integer element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateIntElement(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Action{System.Int32})">
+            <summary>
+            Creates an int element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a integer parameter. <code>Example: (int) => ExampleMethod(int);</code></param>
+            <returns>An integer element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFloatElement(System.String,UnityEngine.Color,System.Single,System.Single,System.Single,System.Single,System.Action{System.Single})">
+            <summary>
+            Creates an float element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a float parameter. <code>Example: (float) => ExampleMethod(float);</code></param>
+            <returns>A float element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateFloatElement(System.String,System.String,System.Single,System.Single,System.Single,System.Single,System.Action{System.Single})">
+            <summary>
+            Creates an float element that can be incremented up or down, with a range.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value.</param>
+            <param name="increment">The value that will be increased/decreased to the starting value.</param>
+            <param name="minValue"></param>
+            <param name="maxValue"></param>
+            <param name="action">The method to execute with a float parameter. <code>Example: (float) => ExampleMethod(float);</code></param>
+            <returns>A float element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateBoolElement(System.String,UnityEngine.Color,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            Creates a bool element that enables or disables a boolean.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="value">The starting boolean value.</param>
+            <param name="action">The method to execute with a boolean parameter.
+            <code>Example: (bool) => ExampleMethod(bool);</code></param>
+            <returns>A bool element.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateBoolElement(System.String,System.String,System.Boolean,System.Action{System.Boolean})">
+            <summary>
+            Creates a bool element that enables or disables a boolean.
+            </summary>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The name hex color of the element. <code>"Example: "#00CA11" for green."</code> </param>
+            <param name="value">The starting boolean value. <code>Example: (bool) => ExampleMethod(bool);</code> </param>
+            <param name="action">The method to execute with a boolean parameter. <code>Example: (bool) => ExampleMethod(bool);</code></param>
+            <returns>A bool element with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateEnumElement``1(System.String,UnityEngine.Color,``0,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="startValue">The starting value of the element.</param>
+            <param name="action">The method that execut</param>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateEnumElement``1(System.String,System.String,``0,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="startValue">The starting value of the element.</param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element with a hex name color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateEnumElement``1(System.String,UnityEngine.Color,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="color">The name color of the element.</param>
+            <param name="action">The method that execut</param>
+        </member>
+        <member name="M:BoneLib.BoneMenu.Elements.SubPanelElement.CreateEnumElement``1(System.String,System.String,System.Action{``0})">
+            <summary>
+            Creates an element that holds enum types that can be changed.
+            </summary>
+            <typeparam name="T">Enum type.</typeparam>
+            <param name="name">The name of the element.</param>
+            <param name="hexColor">The hex color of the element. <code>"Example: "#00CA11" for green."</code></param>
+            <param name="action">The method that executes with an enum parameter. <code>Example: (enum) => ExampleMethod(enum);</code></param>
+            <returns>An enum element with a hex name color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.MenuManager.CreateCategory(System.String,UnityEngine.Color)">
+            <summary>
+            Creates a category inside of the root category.
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="color">The name color of the category.</param>
+            <returns>A new category in the root category.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.MenuManager.CreateCategory(System.String,System.String)">
+            <summary>
+            Creates a new category inside of the root category.
+            </summary>
+            <param name="name">The name of the category.</param>
+            <param name="hexColor">The name color in hex. <code>"Example: #00CA11 for green."</code></param>
+            <returns>A new category in the root category, with a hex color.</returns>
+        </member>
+        <member name="M:BoneLib.BoneMenu.MenuManager.SelectCategory(BoneLib.BoneMenu.Elements.MenuCategory)">
+            <summary>
+            Selects a category and displays it on the UI.
+            </summary>
+            <param name="category">The category you want to select.</param>
+        </member>
+        <member name="M:BoneLib.BoneMenu.MenuManager.SetRoot(BoneLib.BoneMenu.Elements.MenuCategory)">
+            <summary>
+            Sets the root of the menu manager, so all categories created will display here.
+            </summary>
+            <param name="root">The root page that BoneMenu will use to create elements.</param>
+            <remarks><b>Note:</b>
+            This will mean that setting the root will redirect all other categories to the set root, and BoneMenu will treat it
+            as if it were the beginning category.
+            </remarks>
+        </member>
+        <member name="T:BoneLib.BoneMenu.UI.UIManager">
+            <summary>
+            The UI manager's purpose is to tie the internal menu together with the UI.
+            It can show/hide pages, go back to pages, and add/remove elements.
+            </summary>
+        </member>
+        <member name="F:BoneLib.BoneMenu.UI.UIPage.elementTypes">
+            <summary>
+            Dictionary that contains the proper pools for each element type.
+            </summary>
+        </member>
+        <member name="T:BoneLib.GameLayers">
+            <summary>
+            <see cref="T:UnityEngine.LayerMask"/> values for BoneLab.
+            </summary>
+            <remarks>
+            Can be used with <see href="https://en.wikipedia.org/wiki/Mask_(computing)">bitwise</see> 
+            <see href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators">operators</see>.
+            </remarks>
+        </member>
+        <member name="M:BoneLib.Extensions.SetRpm(SLZ.Props.Weapons.Gun,System.Single)">
+            <summary>
+            Set rounds-per-minute.
+            </summary>
+        </member>
+        <member name="M:BoneLib.HelperMethods.GetCleanObjectName(System.String)">
+            <summary>
+            Removes things like [2] and (Clone)
+            </summary>
+        </member>
+        <member name="M:BoneLib.HelperMethods.IsAndroid">
+            <summary>
+            Checks if the user is running MelonLoader on Android
+            </summary>
+        </member>
+        <member name="E:BoneLib.Hooking.OnLevelLoading">
+            <summary>
+            Called at the start of a loading screen.
+            </summary>
+        </member>
+        <member name="E:BoneLib.Hooking.OnLevelInitialized">
+            <summary>
+            Called when the current Level is fully initialized.
+            </summary>
+        </member>
+        <member name="E:BoneLib.Hooking.OnLevelUnloaded">
+            <summary>
+            Called when the current Level unloads.
+            </summary>
+        </member>
+        <member name="M:BoneLib.Hooking.CreateHook(System.Reflection.MethodInfo,System.Reflection.MethodInfo,System.Boolean)">
+            <summary>
+            Hooks the <paramref name="original"/> method and logs some debug info.
+            </summary>
+            <param name="original">Method to be patched</param>
+            <param name="hook">Method to be applied as a patch</param>
+            <param name="isPrefix">
+            Controls whether <paramref name="hook"/> is applied as a Prefix or Postfix patch
+            </param>
+        </member>
+        <member name="T:BoneLib.LevelInfo">
+            <summary>
+            A <see cref="T:SLZ.Marrow.Warehouse.LevelCrate"/> wrapper for use with level loading events in <see cref="T:BoneLib.Hooking"/>.
+            </summary>
+        </member>
+        <member name="T:BoneLib.Nullables.NullableMethodExtensions">
+            <summary>
+            Wraps BONELAB methods that use nullable types, so you can easily use them on the mono side.
+            </summary>
+        </member>
+        <member name="M:BoneLib.Player.GetPhysicsRig">
+            <summary>
+            Returns the <see cref="T:SLZ.Rig.PhysicsRig"/>.
+            </summary>
+        </member>
+        <member name="M:BoneLib.Player.GetCurrentAvatar">
+            <summary>
+            Returns the Player's current <see cref="T:SLZ.VRMK.Avatar"/>.
+            </summary>
+        </member>
+        <member name="M:BoneLib.Player.GetComponentInHand``1(SLZ.Interaction.Hand)">
+            <summary>
+            Generic method for getting any component on the object the Player is holding.
+            </summary>
+            <returns>null if there is no component of type <typeparamref name="T"/>, or <paramref name="hand"/> is null.</returns>
+        </member>
+        <member name="M:BoneLib.Player.GetObjectInHand(SLZ.Interaction.Hand)">
+            <summary>
+            Returns the object <paramref name="hand"/> is holding or null if <paramref name="hand"/> is null.
+            </summary>
+        </member>
+        <member name="M:BoneLib.Player.RotatePlayer(System.Single)">
+            <summary>
+            Positive values: Clockwise rotation 
+            <para/>
+            Negative values: Counterclockwise rotation
+            </summary>
+        </member>
+        <member name="M:BoneLib.RandomShit.PopupBoxManager.CreateNewShibePopup(System.Action{UnityEngine.GameObject})">
+            <summary>
+            Creates an image popup with an image of a Shibe Inu.
+            </summary>
+            <param name="returnCallback">A callback that will be executed when the popup spawns, or <see langword="null"/> if there was an error.</param>
+        </member>
+        <member name="M:BoneLib.RandomShit.PopupBoxManager.CreateBaseAd">
+            <summary>
+            So basically when I was making this I wasn't using any asset bundles yet and I wanted to keep it that way for whatever reason, so instead of just making an asset bundle with the prefab in it like a normal person, I somehow convinced myself that it was a perfectly sane idea to instead manually create the gameobject with a grip component and text and all that fun stuff through code, and that's how this absolute monstrosity of a function came into existence :)
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsUnmanagedAttribute">
+            <summary>
+            Allows <see cref="T:BoneLib.Nullables.BoxedNullable`1"/> to compile, with its <c>where T : unmanaged</c> type stipulation.
+            </summary>
+        </member>
+    </members>
+</doc>
