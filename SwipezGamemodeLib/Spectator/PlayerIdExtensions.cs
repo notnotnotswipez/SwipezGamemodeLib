@@ -12,6 +12,7 @@ namespace SwipezGamemodeLib.Spectator
     public static class PlayerIdExtensions
     {
         public static List<RigManager> hiddenManagers = new List<RigManager>();
+        public static List<PlayerId> hiddenIds = new List<PlayerId>();
         private static Dictionary<RigManager, PlayerHiddenStorage> hiddenStorage = new Dictionary<RigManager, PlayerHiddenStorage>();
 
         public static void Hide(this PlayerId playerId)
@@ -27,10 +28,11 @@ namespace SwipezGamemodeLib.Spectator
                 hiddenStorage.Add(playerRep.RigReferences.RigManager, playerHiddenStorage);*/
 
                 hiddenManagers.Add(playerRep.RigReferences.RigManager);
-                playerRep.RigReferences.LeftHand.DetachObject();
-                playerRep.RigReferences.RightHand.DetachObject();
+                playerRep.DetachObject(Handedness.LEFT);
+                playerRep.DetachObject(Handedness.RIGHT);
                 playerRep.RigReferences.RigManager.gameObject.active = false;
                 playerRep.repCanvas.gameObject.active = false;
+                hiddenIds.Add(playerId);
                 
                 // Get private field
                 var audioSourceField = playerRep.GetType().GetField("_voiceSource", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -54,6 +56,7 @@ namespace SwipezGamemodeLib.Spectator
                 playerHiddenStorage.Show();
                 hiddenStorage.Remove(playerRep.RigReferences.RigManager);*/
                 hiddenManagers.Remove(playerRep.RigReferences.RigManager);
+                hiddenIds.Remove(playerId);
                 playerRep.RigReferences.RigManager.gameObject.active = true;
                 playerRep.repCanvas.gameObject.active = true;
                 

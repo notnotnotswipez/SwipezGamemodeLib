@@ -12,6 +12,7 @@ using MelonLoader;
 using SLZ;
 using SLZ.Interaction;
 using SLZ.Rig;
+using SwipezGamemodeLib.Spectator;
 using SwipezGamemodeLib.Utilities;
 using UnityEngine;
 
@@ -66,6 +67,34 @@ namespace SwipezGamemodeLib.Patches
                         }
                     }
                 }
+            }
+        }
+
+        [HarmonyPatch(typeof(PlayerRep), "AttachObject")]
+        public class AttachObjectPatch
+        {
+            public static bool Prefix(PlayerRep __instance)
+            {
+                if (PlayerIdExtensions.hiddenIds.Contains(__instance.PlayerId))
+                {
+                    return false;
+                }
+
+                return true;
+            }
+        }
+        
+        [HarmonyPatch(typeof(PlayerRep), "DetachObject")]
+        public class DetachObjectPatch
+        {
+            public static bool Prefix(PlayerRep __instance)
+            {
+                if (PlayerIdExtensions.hiddenIds.Contains(__instance.PlayerId))
+                {
+                    return false;
+                }
+
+                return true;
             }
         }
 

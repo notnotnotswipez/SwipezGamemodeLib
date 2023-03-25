@@ -13,6 +13,11 @@ namespace SwipezGamemodeLib.Utilities
             internalStopwatch = Stopwatch.StartNew();
         }
         
+        public long GetTimeMs()
+        {
+            return internalStopwatch.ElapsedMilliseconds;
+        }
+        
         public void Reset()
         {
             if (internalStopwatch == null)

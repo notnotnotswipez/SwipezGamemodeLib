@@ -13,8 +13,6 @@ namespace SwipezGamemodeLib.SDK
     [RegisterTypeInIl2Cpp]
     public sealed class GamemodeResetSpawnable : FusionMarrowBehaviour
     {
-        private static List<string> barcodes = new List<string>();
-        private bool registered = false;
         private string barcode;
         
         public GamemodeResetSpawnable(IntPtr intPtr) : base(intPtr)
@@ -24,19 +22,11 @@ namespace SwipezGamemodeLib.SDK
         private void Awake()
         {
             barcode = gameObject.GetComponent<SpawnableCratePlacer>().spawnableCrateReference._barcode;
-
-            if (barcodes.Contains(barcode))
-            {
-                return;
-            }
-            
-            barcodes.Add(barcode);
             GamemodeManager.OnGamemodeChanged += OnGamemodeChanged;
         }
 
         private void OnDestroy()
         {
-            barcodes.Remove(barcode);
             GamemodeManager.OnGamemodeChanged -= OnGamemodeChanged;
         }
 
@@ -48,11 +38,12 @@ namespace SwipezGamemodeLib.SDK
                     foreach (var pair in barcodeToPool) {
                         if (pair.key.ToString() == barcode) {
                             var spawnedObjects = pair.value.spawned.ToArray();
-
-                            foreach (var spawned in spawnedObjects) {
-                                spawned.Despawn();
+                            if (spawnedObjects.Count > 0)
+                            {
+                                foreach (var spawned in spawnedObjects) {
+                                    spawned.Despawn();
+                                }
                             }
-
                             break;
                         }
                     }

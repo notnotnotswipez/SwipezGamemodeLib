@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Main = SwipezGamemodeLib.Main;
 
 // ...
-[assembly: MelonInfo(typeof(Main), "SwipezGamemodeLib", "1.0.0", "notnotnotswipez")]
+[assembly: MelonInfo(typeof(Main), "SwipezGamemodeLib", "1.0.1", "notnotnotswipez")]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
