@@ -14,11 +14,16 @@ namespace SwipezGamemodeLib.Patches
         {
             public static void Postfix(Avatar __instance)
             {
-                if (Player.rigManager.avatar == __instance)
+                // Sometimes this method gets called while Bonelib is still picking up the manager.
+                // This check prevents a null ref, but it didnt really matter anyway.
+                if (Player.rigManager != null)
                 {
-                    if (_avatarStatsCapture != null)
+                    if (Player.rigManager.avatar == __instance)
                     {
-                        _avatarStatsCapture.Apply(__instance);
+                        if (_avatarStatsCapture != null)
+                        {
+                            _avatarStatsCapture.Apply(__instance);
+                        }
                     }
                 }
             }

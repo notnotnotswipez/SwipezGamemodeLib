@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using MelonLoader;
 using SLZ.Bonelab;
+using SLZ.Interaction;
 using SLZ.Marrow;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Warehouse;
@@ -100,6 +101,11 @@ namespace SwipezGamemodeLib.Spawning
 		        manager.SwapAvatarCrate(barcode);
 		        manager.physicsRig.RagdollRig();
 		        manager.name = barcode;
+		        foreach (var inventoryReceiver in manager.GetComponentsInChildren<InventorySlotReceiver>())
+		        {
+			        inventoryReceiver.enabled = false;
+		        }
+		        
 		        action.Invoke(manager);
 	        }));
         }

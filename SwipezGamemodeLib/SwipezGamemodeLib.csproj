@@ -404,10 +404,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\AvatarStatsCapture.cs" />
+    <Compile Include="Data\HeadIcon.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Patches\AvatarCalculatePatch.cs" />
     <Compile Include="Patches\AccessoryInstancePatch.cs" />
     <Compile Include="Patches\BlacklistPatches.cs" />
+    <Compile Include="Patches\GrabHelperOverridePatches.cs" />
     <Compile Include="Patches\HeadTitlePatch.cs" />
     <Compile Include="Patches\RepFixingPatches.cs" />
     <Compile Include="Patches\SendPlayerDamagePatch.cs" />
