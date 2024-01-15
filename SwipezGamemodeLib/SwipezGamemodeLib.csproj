@@ -405,7 +405,11 @@
   <ItemGroup>
     <Compile Include="Data\AvatarStatsCapture.cs" />
     <Compile Include="Data\HeadIcon.cs" />
+    <Compile Include="Events\SwipezGamemodeLibEvents.cs" />
+    <Compile Include="Extensions\BundleExtensions.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="Module\PlayerSendCustomEventMessage.cs" />
+    <Compile Include="Module\SwipezLibModule.cs" />
     <Compile Include="Patches\AvatarCalculatePatch.cs" />
     <Compile Include="Patches\AccessoryInstancePatch.cs" />
     <Compile Include="Patches\BlacklistPatches.cs" />

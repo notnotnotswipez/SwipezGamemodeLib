@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
+using BoneLib.Nullables;
 using MelonLoader;
 using SLZ.Bonelab;
 using SLZ.Interaction;
 using SLZ.Marrow;
+using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Warehouse;
 using SLZ.Player;
@@ -72,6 +74,20 @@ namespace SwipezGamemodeLib.Spawning
             }
 
             return true;
+        }
+
+        public static void SpawnSpawnable(string barcode, Vector3 position, Quaternion rotation, Action<GameObject> onSpawn)
+        {
+	        SpawnableCrateReference spawnableCrate = new SpawnableCrateReference(barcode);
+	        Spawnable spawnable = new Spawnable
+	        {
+		        crateRef = spawnableCrate,
+		        policyData = null
+	        };
+	        AssetSpawner.Register(spawnable);
+
+	        AssetSpawner.Spawn(spawnable, position, rotation, new BoxedNullable<Vector3>(null), false,
+		        new BoxedNullable<int>(null), onSpawn);
         }
 
         public static void SpawnGameObject(string barcode, Vector3 position, Quaternion rotation,

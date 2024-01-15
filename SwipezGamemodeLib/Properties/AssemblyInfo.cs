@@ -1,12 +1,16 @@
-﻿using MelonLoader;
+﻿using System;
+using MelonLoader;
 using SwipezGamemodeLib; // The namespace of your mod class
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using LabFusion.SDK.Modules;
+using SwipezGamemodeLib.Module;
 using Main = SwipezGamemodeLib.Main;
 
 // ...
-[assembly: MelonInfo(typeof(Main), "SwipezGamemodeLib", "1.1.0", "notnotnotswipez")]
+[assembly: MelonInfo(typeof(Main), "SwipezGamemodeLib", "1.3.0", "notnotnotswipez")]
+[assembly: ModuleInfo(typeof(SwipezLibModule), "SwipezGamemodeLibModule", "1.3.0", "notnotnotswipez", "swlibmodule", true, ConsoleColor.Yellow)]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information

@@ -37,6 +37,7 @@ namespace SwipezGamemodeLib.Spectator
                 var audioSource = audioSourceField.GetValue(playerRep) as AudioSource;
                 if (audioSource)
                 {
+               
                     audioSource.mute = true;
                 }
             }
@@ -77,6 +78,7 @@ namespace SwipezGamemodeLib.Spectator
                 if (_headIcons.ContainsKey(playerId))
                 {
                     _headIcons[playerId].Cleanup();
+                    _headIcons.Remove(playerId);
                 }
                 return;
             }
